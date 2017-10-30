@@ -1,0 +1,66 @@
+/* This is a style sheet comment. */
+
+body{
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: rgba(100,	100, 100, 0.5);
+}
+
+a{
+  color: rgb(17, 207, 43);
+  text-decoration: none;
+}
+
+a:visited{
+  color:rgb(247, 207, 47);
+}
+
+a:hover{
+  color: rgb(228, 100, 189);
+  text-decoration: underline;
+
+}
+
+a:active{
+  color: rgb(210, 133, 91);
+}
+
+p{
+  line-height: 1.5;
+  color: blue;
+
+}
+
+em{
+  font-style: normal;
+  font-weight: bold;
+}
+
+strong{
+  font-style: italic;
+  font-weight: normal;
+}
+
+em, strong{
+  color: red;
+}
+
+ul{
+  list-style-type: square;
+}
+
+header h1{
+  font-size: 72px;
+}
+
+footer{
+  background-color: #ddd;
+
+}
+
+footer p{
+  color: #222;
+}
+
+.highlighted{
+  background-color: rgb(255,199,59);
+}
