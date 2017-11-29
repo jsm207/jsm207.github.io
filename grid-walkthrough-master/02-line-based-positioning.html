@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Line-based Positioning</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Since we're prototyping, we'll write our styles inside HTML */
+      .grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 200px);
+      }
+
+      #a{
+        /*grid-column-start: 1;
+        grid-column-end: 5;*/
+
+        grid-column: 1/-1;   /*-1 marks end of line*/
+
+      }
+
+      #b{
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      #c{
+        grid-column: 2 / span 2;
+      }
+
+      #d{
+        grid-column: 3 / span 2;
+        grid-row: 3;
+      }
+
+
+      /* Write your styles above this line! */
+
+      .grid div {
+        border: 1px solid rgb(12,71,162);
+        border-radius: 3px;
+        background-color: rgba(12,71,162,0.8);
+        padding: 0.2rem;
+        color: #fff;
+      }
+
+      .grid div:nth-of-type(2n) {
+        background-color: rgba(12,71,162,0.6);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="a">Box A</div>
+      <div id="b">Box B</div>
+      <div id="c">Box C</div>
+      <div id="d">Box D</div>
+    </div>
+
+  </body>
+</html>

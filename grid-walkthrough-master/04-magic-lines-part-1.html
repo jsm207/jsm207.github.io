@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Line-based Positioning</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Since we're prototyping, we'll write our styles inside HTML */
+
+      .grid{
+        display: grid;
+        grid-template-columns: 1fr [content-start] 1fr [content-end];
+        grid-template-rows: 200px [content-start] 400px [content-end];
+        grid-gap: 20px;
+      }
+
+
+      /* Write your styles above this line! */
+
+      .grid div {
+        border: 1px solid rgb(12,71,162);
+        border-radius: 3px;
+        background-color: rgba(12,71,162,0.8);
+        padding: 0.2rem;
+        color: #fff;
+      }
+
+      .grid div:nth-of-type(2n) {
+        background-color: rgba(12,71,162,0.6);
+      }
+
+      .test{
+        background-color: #ccc;
+        grid-area: content;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="masthead">Header</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="content">Article</div>
+      <div id="footer">Footer</div>
+      <div class="test">Test</div>
+    </div>
+
+  </body>
+</html>
