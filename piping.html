@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Parallel Processes</title>
+    <link href="portfolio.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Ubuntu+Mono" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="wrapper">
+
+    <header>
+      <h1>Justin Moon</h1>
+      <h2>Parallel Processing Using Pipes</h2>
+    </header>
+
+    <nav>
+      <h3>C Programs</h3>
+      <ul>
+        <li><a href="networking.html">Socket Networking</a></li>
+      </ul>
+      <h3>C++ Programs</h3>
+      <ul>
+        <li><a href="hashtable.html">Hash Table Implementation</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="index.html">Back to Overview</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+    <section>
+      <h3>Code Functionality</h3>
+      <article>
+        <p>These five C programs are necessary to execute the parallel process shown in the diagram below.
+          The process serves the purpose of sorting very large data sets in parallel with a concurrency level
+          of 2, using parent-child processes to streamline efficiency. The data read into and written out of
+          each child process travels by way of filestream piping, directly into executed programs included in the
+          children.
+        </p>
+      </article>
+      <article>
+        <img src="piping.JPG" alt="Diagram" />
+      </article>
+      <article>
+        <h4>Individual Programs</h4>
+        <p>The program "myCat2.c" reads data from files, outputting all or a subset of the source data. "mySort2.c" then sorts the
+          specified subset written out from myCat2.c, while "myFormat2.c" will prepend a specific code, either 1 or 2, to specify
+          which data set the string is from. "myMerge2.c" will then separate the strings based on their prepended codes, merge the data,
+          and finally write the data to stdout. "myParent3.c" is the parent-child process including all of the code necessary to
+          ensure that the parallel process perform as expected. This is the program of interest, and thus as been included in a gist below.
+        </p>
+      </article>
+      <article>
+        <script src="https://gist.github.com/jsm207/399119e068206f5fb0e67e35e74713ce.js"></script>
+      </article>
+
+    </section>
+    </main>
+  </div>
+
+
+  </body>
+
+</html>

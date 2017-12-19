@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Socket Networking</title>
+    <link href="portfolio.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Ubuntu+Mono" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+    <header>
+      <h1>Justin Moon</h1>
+      <h2>TCP Client/Server Networking</h2>
+    </header>
+    <nav>
+      <h3>C Programs</h3>
+      <ul>
+        <li><a href="piping.html">Parallel Processing</a></li>
+      </ul>
+      <h3>C++ Programs</h3>
+      <ul>
+        <li><a href="hashtable.html">Hash Table Implementation</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="index.html">Back to Overview</a></li>
+      </ul>
+    </nav>
+    <main>
+
+    <section>
+      <h3>Code Functionality</h3>
+      <article>
+        <p>This network consists of four independently run C programs: three remote servers and one client. Two of
+          these servers are identical, with application protocols designed to sort arrays of strings,
+          while the third server would merge the two sorted arrays into one completely sorted array.
+          The servers each accept one argument, a port number, create and bind a socket to the
+          specified port number, and wait for a connection request from the client. The Client must
+          create three sockets and request connections from each server, using the hostname and the port number
+          to specify the request. The client sends the first array of strings, specified by the user, to server 1
+          where they are sorted and returned, repeating the process for the second array and server 2. Upon receiving
+          the second sorted array, the client writes both arrays into server 3, which merges the two arrays into
+          one sorted array and sends the resulting array back to the client.
+        </p>
+      </article>
+      <article>
+        <img src="socket networking.JPG" alt="Diagram" />
+      </article>
+      <article>
+        <h4>Sorting Server Code (Servers 1 & 2)</h4>
+        <script src="https://gist.github.com/jsm207/86b23f1ac9618381cf51a45450ee28ad.js"></script>
+      </article>
+      <article>
+        <h4>Merging Server Code (Server 3)</h4>
+        <script src="https://gist.github.com/jsm207/4cf72dc3039105f6364f021d1ae2c0ae.js"></script>
+      </article>
+      <article>
+        <h4>Client Code</h4>
+        <script src="https://gist.github.com/jsm207/21607f6f58a967d9835ea85871ccfcce.js"></script>
+      </article>
+    </section>
+    </main>
+  </div>
+
+  </body>
+</html>
